@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-// =============== MODEL ===============
 abstract class Account {
     protected String accountNumber;
     protected String accountHolder;
@@ -84,7 +83,6 @@ class CurrentAccount extends Account {
     }
 }
 
-// =============== REPOSITORY ===============
 class AccountRepository {
     private final String FILE_PATH = "accounts.txt";
 
@@ -182,14 +180,13 @@ class AccountService {
     }
 }
 
-// =============== UI ===============
 public class BankManagementSystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         AccountService service = new AccountService();
 
         while (true) {
-            System.out.println("\n==== BANK MANAGEMENT SYSTEM ====");
+            System.out.println("\n BANK MANAGEMENT SYSTEM ");
             System.out.println("1. Create Account");
             System.out.println("2. Deposit");
             System.out.println("3. Withdraw");
